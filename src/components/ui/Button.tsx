@@ -2,16 +2,18 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { ReactNode, MouseEvent } from 'react'
 
 const Button = ({
   children,
   href,
+  onClick,
   size = 'md',
   className = '',
 }: {
   children: ReactNode
-  href: string
+  href?: string
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void
   size?: 'sm' | 'md' | 'lg'
   className?: string
 }) => {
@@ -21,16 +23,21 @@ const Button = ({
     lg: 'px-8 py-4 text-lg',
   }
 
+  const buttonClass = `relative inline-flex items-center justify-center rounded-md 
+    bg-white/10 font-medium text-white backdrop-blur-sm transition-all 
+    hover:bg-white/20 ${sizeClasses[size]} ${className}`
+
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <Link
-        href={href}
-        className={`relative inline-flex items-center justify-center rounded-md 
-          bg-white/10 font-medium text-white backdrop-blur-sm transition-all 
-          hover:bg-white/20 ${sizeClasses[size]} ${className}`}
-      >
-        {children}
-      </Link>
+      {href ? (
+        <Link href={href} className={buttonClass}>
+          {children}
+        </Link>
+      ) : (
+        <button onClick={onClick} className={buttonClass}>
+          {children}
+        </button>
+      )}
     </motion.div>
   )
 }

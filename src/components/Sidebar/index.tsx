@@ -18,7 +18,17 @@ import {
   Cat,
   ChevronDown,
   Settings,
-  Presentation
+  Presentation,
+  Banknote,
+  Building,
+  BusFront,
+  CalendarDays,
+  Camera,
+  Cpu,
+  MapPin,
+  Scissors,
+  Utensils,
+  Wrench
 } from 'lucide-react'
 import NavSection from './NavSection'
 
@@ -55,7 +65,18 @@ const categories = [
   { name: 'Agriculture', icon: <Wheat className="h-4 w-4" /> },
   { name: 'Santé', icon: <Hospital className="h-4 w-4" /> },
   { name: 'Éducation', icon: <BookOpen className="h-4 w-4" /> },
+  { name: 'Tourisme', icon: <MapPin className="h-4 w-4" /> },
+  { name: 'Finance', icon: <Banknote className="h-4 w-4" /> },
+  { name: 'Immobilier', icon: <Building className="h-4 w-4" /> },
+  { name: 'Technologie', icon: <Cpu className="h-4 w-4" /> },
+  { name: 'Transports', icon: <BusFront className="h-4 w-4" /> },
+  { name: 'Événementiel', icon: <CalendarDays className="h-4 w-4" /> },
+  { name: 'Mode & Beauté', icon: <Scissors className="h-4 w-4" /> },
+  { name: 'Restauration', icon: <Utensils className="h-4 w-4" /> },
+  { name: 'Médias', icon: <Camera className="h-4 w-4" /> },
+  { name: 'Services', icon: <Wrench className="h-4 w-4" /> },
 ]
+
 
 const Sidebar = ({ onFilterChange, isCollapsed, toggleCollapse }: SidebarProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null)
