@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { 
   LayoutDashboard, 
   ShoppingCart, 
@@ -18,7 +18,7 @@ import {
   Cat,
   ChevronDown,
   Settings,
-  Presentation,
+  
   Banknote,
   Building,
   BusFront,
@@ -30,6 +30,7 @@ import {
   Utensils,
   Wrench
 } from 'lucide-react'
+import Image from 'next/image'
 import NavSection from './NavSection'
 
 interface SidebarProps {
@@ -50,8 +51,28 @@ const frameworks = [
   { name: 'Svelte', icon: '/images/sveltejs-icon.png' },
   { name: 'Astro', icon: '/images/astrojs-icon.png' },
   { name: 'React Native', icon: '/images/react-icon.png' },
+  { name: 'Expo', icon: '/images/expo.png' },
+  { name: 'SolidJS', icon: '/images/solidJS.png' },
+  { name: 'Qwik', icon: '/images/qwik.png' },
+  { name: 'Fastify', icon: '/images/fastify.png' },
+  { name: 'Hapi.js', icon: '/images/hapi.png' },
+  { name: 'Koa', icon: '/images/koa.png' },
+  { name: 'AdonisJS', icon: '/images/Adonis.png' },
+  { name: 'Flutter', icon: '/images/flutter.png' },
+  { name: 'Remix', icon: '/images/remix.png' },
+  { name: 'Blitz.js', icon: '/images/blitz.png' },
+  { name: 'RedwoodJS', icon: '/images/redwood.png' },
+  { name: 'Meteor', icon: '/images/meteor.png' },
   { name: 'Django', icon: '/images/django.png' },
   { name: 'Flask', icon: '/images/flask-icon.png' },
+  { name: 'Nuxt.js', icon: '/images/nuxt.png' },
+  { name: 'NestJS', icon: '/images/nest.png' },
+  { name: 'Express.js', icon: '/images/express.png' },
+  { name: 'Laravel', icon: '/images/laravel.png' },
+  { name: 'Symfony', icon: '/images/symfony.png' },
+  { name: 'Ruby on Rails', icon: '/images/rails.png' },
+  { name: 'Spring Boot', icon: '/images/spring.png' },
+  { name: 'Phoenix', icon: '/images/phonix.png' },
 ]
 
 const categories = [
@@ -244,11 +265,11 @@ const Sidebar = ({ onFilterChange, isCollapsed, toggleCollapse }: SidebarProps) 
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="h-8 w-8 rounded-full bg-gray-700">
-                  <Presentation className='h-8 w-8' />
+                  <Image src='/images/OpenNumeric.png' alt="Avatar" height={40} width={40} className="h-full w-full rounded-full" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Open Numeric</p>
-                  <p className="text-xs text-gray-400">Nestor COMPAORE</p>
+                  <p className="text-xs text-gray-400">contact@opennumeric.com</p>
                 </div>
               </div>
               <button className="rounded-md p-1 text-gray-400 hover:bg-gray-800 hover:text-white">

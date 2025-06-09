@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Search, Upload, Heart } from 'lucide-react'
+import { Search, Heart, ShoppingBasket } from 'lucide-react'
 import Link from 'next/link'
 import { useState, FormEvent } from 'react'
 
@@ -47,8 +47,8 @@ const Navbar = ({ onSearch, isCollapsed }: NavbarProps) => {
             whileTap={{ scale: 0.95 }}
             className="flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700"
           >
-            <Upload className="mr-2 h-4 w-4" />
-            Upload Template
+            <ShoppingBasket className="mr-2 h-4 w-4" />
+            ASK our Services
           </motion.button>
 
           <Link href="/donate">
